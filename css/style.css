@@ -1,0 +1,189 @@
+/* --------------------
+   General Styling
+-------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  margin: 0;
+}
+
+.bread-crumb-area {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+}
+.bread-crumb-area .bread-crumb-title {
+  margin-bottom: 10px;
+}
+
+
+.bread-crumb-area a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.bread-crumb-area a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.bread-crumb-title h2 {
+  font-weight: 700;
+  font-size: 42px;
+  margin-top: 15px;
+}
+
+/* --------------------
+   Section Headings
+-------------------- */
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin: 40px 0 25px;
+  border-left: 5px solid #f13f4d;
+  padding-left: 12px;
+}
+
+/* --------------------
+   Helper Section
+-------------------- */
+.helper-function {
+  padding: 50px 0 20px;
+  text-align: center;
+}
+
+.helper-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f13f4d;
+}
+
+.helper-description {
+  color: #555;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --------------------
+   Tool Card Styling
+-------------------- */
+.tool-card {
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px 15px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+/* Border animation using pseudo-elements */
+.tool-card::before,
+.tool-card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 2px solid transparent;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+/* Top-left corner start */
+.tool-card::before {
+  top: 0;
+  left: 0;
+  border-top-color: #f13f4d;
+  border-left-color: #f13f4d;
+}
+
+/* Bottom-right corner start */
+.tool-card::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-color: #f13f4d;
+  border-right-color: #f13f4d;
+}
+
+/* On hover — animate the border outward */
+.tool-card:hover::before,
+.tool-card:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+/* Optional subtle lift effect */
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------
+   Tool Icon
+-------------------- */
+.tool-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 16px;
+  /* background: rgba(13, 110, 253, 0.08); */
+  background: rgb(244 67 54 / 9%);
+  color: #f13f4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: 0.4s ease, transform 0.35s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.tool-card:hover .tool-icon {
+  background: #f13f4d;
+  color: #fff;
+  /* transform: translateY(-8px); */
+}
+
+/* --------------------
+   Tool Name
+-------------------- */
+.tool-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* --------------------
+   Responsive Tweaks
+-------------------- */
+@media (max-width: 575.98px) {
+  .bread-crumb-title h2 {
+    font-size: 32px;
+  }
+
+  .tool-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin: 30px 0 20px;
+  }
+}
